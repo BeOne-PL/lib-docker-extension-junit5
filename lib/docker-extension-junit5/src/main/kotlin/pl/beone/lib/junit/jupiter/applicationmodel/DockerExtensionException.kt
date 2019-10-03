@@ -1,4 +1,4 @@
-package pl.beone.lib.junit5.extension.docker.applicationmodel
+package pl.beone.lib.junit.jupiter.applicationmodel
 
 open class DockerExtensionException(
     mavenLog: String

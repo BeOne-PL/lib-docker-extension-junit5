@@ -1,8 +1,8 @@
-package pl.beone.lib.junit5.extension.docker.external
+package pl.beone.lib.junit.jupiter.external
 
 import mu.KotlinLogging
 import org.testcontainers.containers.Container
-import pl.beone.lib.junit5.extension.docker.applicationmodel.DockerExtensionTestExecutionException
+import pl.beone.lib.junit.jupiter.applicationmodel.DockerExtensionTestExecutionException
 import java.lang.reflect.Method
 
 class MavenOnTestContainerRunner(

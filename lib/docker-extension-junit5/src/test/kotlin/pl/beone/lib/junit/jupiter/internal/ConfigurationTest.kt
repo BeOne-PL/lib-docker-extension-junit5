@@ -1,4 +1,4 @@
-package pl.beone.lib.junit5.extension.docker.internal
+package pl.beone.lib.junit.jupiter.internal
 
 import io.kotlintest.shouldBe
 import io.kotlintest.shouldThrow

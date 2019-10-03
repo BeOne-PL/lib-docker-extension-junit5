@@ -1,4 +1,4 @@
-package pl.beone.lib.junit5.extension.docker.external
+package pl.beone.lib.junit.jupiter.external
 
 import io.kotlintest.shouldBe
 import org.junit.jupiter.api.Disabled

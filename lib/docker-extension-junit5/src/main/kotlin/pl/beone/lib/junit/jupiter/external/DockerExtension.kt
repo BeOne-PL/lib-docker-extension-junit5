@@ -1,8 +1,8 @@
-package pl.beone.lib.junit5.extension.docker.external
+package pl.beone.lib.junit.jupiter.external
 
 import org.junit.jupiter.api.extension.*
-import pl.beone.lib.junit5.extension.docker.applicationmodel.DockerExtensionException
-import pl.beone.lib.junit5.extension.docker.internal.Configuration
+import pl.beone.lib.junit.jupiter.applicationmodel.DockerExtensionException
+import pl.beone.lib.junit.jupiter.internal.Configuration
 import java.io.File
 import java.lang.reflect.Method
 import java.util.concurrent.atomic.AtomicBoolean

@@ -1,4 +1,4 @@
-package pl.beone.lib.junit5.extension.docker.external
+package pl.beone.lib.junit.jupiter.external
 
 import com.github.dockerjava.api.model.ExposedPort
 import com.github.dockerjava.api.model.PortBinding

@@ -1,4 +1,4 @@
-package pl.beone.lib.junit5.extension.docker.internal
+package pl.beone.lib.junit.jupiter.internal
 
 import org.testcontainers.shaded.org.apache.commons.lang.text.StrSubstitutor
 import pl.beone.lib.typeconverter.internal.castOrConvert

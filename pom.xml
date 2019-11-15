@@ -43,12 +43,12 @@
 
         <type-converter.version>1.0.0</type-converter.version>
 
-        <testcontainers.version>1.12.0</testcontainers.version>
-        <kotlin-logging.version>1.7.3</kotlin-logging.version>
+        <testcontainers.version>1.12.3</testcontainers.version>
+        <kotlin-logging.version>1.7.6</kotlin-logging.version>
 
         <logback.version>1.2.3</logback.version>
-        <junit-jupiter.version>5.5.1</junit-jupiter.version>
-        <kotlintest-runner-junit5.version>3.4.0</kotlintest-runner-junit5.version>
+        <junit-jupiter.version>5.5.2</junit-jupiter.version>
+        <kotlintest-runner-junit5.version>3.4.2</kotlintest-runner-junit5.version>
 
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <build-helper-maven-plugin.version>3.0.0</build-helper-maven-plugin.version>

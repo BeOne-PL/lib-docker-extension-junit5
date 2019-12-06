@@ -15,8 +15,7 @@ class DockerExtensionTest {
 
     @Test
     fun checkIfDockerFragmentWasUsedToBuildImage() {
-        String(readTestFileUsingCat()).trim()
-            .let { it shouldBe "test" }
+        String(readTestFileUsingCat()).trim() shouldBe "test"
     }
 
     @Test

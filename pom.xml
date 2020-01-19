@@ -111,7 +111,16 @@
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
+                <excludes>
+                    <exclude>docker-extension.properties</exclude>
+                </excludes>
+            </testResource>
+            <testResource>
+                <directory>src/test/resources</directory>
                 <filtering>true</filtering>
+                <includes>
+                    <include>docker-extension.properties</include>
+                </includes>
             </testResource>
         </testResources>
 

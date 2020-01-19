@@ -3,7 +3,6 @@ package pl.beone.lib.junit.jupiter.internal
 import io.kotlintest.shouldBe
 import io.kotlintest.shouldThrow
 import org.junit.jupiter.api.Test
-import java.io.File
 import java.io.IOException
 
 class ConfigurationTest {
@@ -35,37 +34,6 @@ class ConfigurationTest {
         val configuration = Configuration()
 
         configuration.getProperty("docker.test.maven.container.test.run-after") shouldBe "chown -R 1000:1000 /test"
-    }
-
-    @Test
-    fun `getProperty _ docker-test_properties exist`() {
-        mockDockerTestProperties {
-            val configuration = Configuration()
-
-            configuration.getProperty("docker.test.image.custom.enabled", Boolean::class.java) shouldBe true
-
-            configuration.getProperty("docker.test.image.custom.name") shouldBe "docker-test-runner:changed-test"
-
-            configuration.getProperty("additional.property") shouldBe "no matter"
-        }
-    }
-
-    private fun mockDockerTestProperties(toRun: () -> Unit) {
-        val file = File(getRootResource() + "docker-test.properties")
-            .apply {
-                writeText(
-                    """
-                        docker.test.image.custom.name=docker-test-runner:changed-test
-                        additional.property=no matter
-                    """.trimIndent()
-                )
-            }
-
-        try {
-            toRun()
-        } finally {
-            file.delete()
-        }
     }
 
     private fun getRootResource(): String =

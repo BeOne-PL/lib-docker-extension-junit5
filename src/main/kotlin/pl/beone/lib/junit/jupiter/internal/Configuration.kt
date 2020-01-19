@@ -7,8 +7,7 @@ import java.util.*
 class Configuration {
 
     private val baseProperties = Properties().apply {
-        load("/base-docker-test.properties")
-        load("/docker-test.properties")
+        load("/docker-extension.properties")
     }
     private val strSubstitutor = StrSubstitutor(baseProperties)
 

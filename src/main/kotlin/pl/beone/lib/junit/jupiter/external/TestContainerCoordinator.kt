@@ -8,6 +8,7 @@ import org.testcontainers.containers.GenericContainer
 import org.testcontainers.containers.wait.strategy.AbstractWaitStrategy
 import org.testcontainers.images.builder.ImageFromDockerfile
 import java.io.File
+import java.io.FileNotFoundException
 import kotlin.concurrent.thread
 
 class TestContainerCoordinator(
@@ -101,8 +102,11 @@ class TestContainerCoordinator(
         try {
             val dockerfileFragment = File(tmpDirectory, imageCustomDockerModuleDockerfileFragmentName)
             if (dockerfileFragment.exists()) dockerfileFragment.readText() else ""
-        } catch (e: NoSuchFileException) {
-            ""
+        } catch (e: Exception) {
+            when (e) {
+                is NoSuchFileException, is FileNotFoundException -> ""
+                else -> throw e
+            }
         }
 
     fun start() {
